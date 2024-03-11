@@ -12,9 +12,6 @@ jobs:
        - name: Copy addon directory (on EC2)
          run: cp -r ./addons odoo/addons/
 
-       - name: Copy addon directory (on EC2)
-         run: cp -r ./config/odoo.conf etc/odoo.conf
-       
        - name: Pull Latest Changes
          run: git pull origin main
        
