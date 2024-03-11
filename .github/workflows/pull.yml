@@ -1,9 +1,8 @@
 name: CICD with github actions
 
 on:
-  workflow_run:
-    workflows: Build and push Odoo image
-    types: completed 
+  push:
+    branches: [ main ]
 
 jobs:
   deploy:
