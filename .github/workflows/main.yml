@@ -19,7 +19,7 @@ jobs:
           pem-key-file: ${{ secrets.SSH_KEY }}
 
        - name: Pull Latest Changes
-         run: git pull origin main
+         run: git pull odoo-CICD main
        - name: Restart Odoo Service
          run: |
           sudo service odoo-server start
