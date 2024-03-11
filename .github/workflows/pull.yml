@@ -13,7 +13,7 @@ jobs:
        
        - name: change the directory
          run: |
-          sudo cd /opt/odoo/custom/odoo-CICD/addons
+            cd /opt/odoo/custom/odoo-CICD/addons
 
        - name: Pull Latest Changes
          run: git pull origin main
