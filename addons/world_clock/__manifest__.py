@@ -2,7 +2,7 @@
     'name': 'World Clock',
     'author': 'Angelo Admin',
     'category': 'Application',
-    'summary': 'World ',
+    'summary': 'World cl',
     'description': """
         World Clock
     """,
