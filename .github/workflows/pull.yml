@@ -17,5 +17,5 @@ jobs:
        - name: Pull Latest Changes
          run: git pull origin main
        
-       # - name: Start Odoo service (on EC2)
-       #   run: sudo systemctl start odoo
+       - name: Start Odoo service (on EC2)
+         run: sudo systemctl start odoo
