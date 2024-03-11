@@ -7,7 +7,7 @@
     'sequence': 11,
     'summary': """
             The Common Process Log module is a versatile tool designed to handle log management for applications. 
-            Its primary features and functionalities include
+            Its primary features
             
             - Log Collection
             - Log Storage
