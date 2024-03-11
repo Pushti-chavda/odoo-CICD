@@ -9,6 +9,11 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+       - name: Login to github
+         uses: action/login-action@v2
+         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOCKEN}}
+       
        - name: Copy addon directory (on EC2)
          run: cp -r ./addons odoo/odoo/addons/
 
