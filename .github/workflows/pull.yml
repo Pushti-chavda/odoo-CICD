@@ -12,7 +12,8 @@ jobs:
          uses: actions/checkout@v2  
        
        - name: change the directory
-         run: sudo cd /opt/odoo/custom/odoo-CICD/addons
+         run: |
+          sudo cd /opt/odoo/custom/odoo-CICD/addons
 
        - name: Pull Latest Changes
          run: git pull origin main
