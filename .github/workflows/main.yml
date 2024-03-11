@@ -18,8 +18,14 @@ jobs:
           user: ubuntu  # Adjust username if needed
           pem-key-file: ${{ secrets.SSH_KEY }}
 
+       - name: Copy addon directory (on EC2)
+         run: cp -r ./addons odoo/addons/
+
+       - name: Copy addon directory (on EC2)
+         run: cp -r ./config/odoo.conf etc/odoo.conf
+       
        - name: Pull Latest Changes
          run: git pull odoo-CICD main
-       - name: Restart Odoo Service
-         run: |
-          sudo service odoo-server start
+       
+       - name: Start Odoo service (on EC2)
+         run: sudo systemctl start odoo
