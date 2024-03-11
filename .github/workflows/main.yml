@@ -13,10 +13,10 @@ jobs:
          uses: actions/checkout@v2  
        
        - name: Copy addon directory (on EC2)
-         run: cp -r ./addons odoo/odoo/addons/
+         run: cd /opt/odoo/custom/odoo-CICD/addons
 
        - name: Pull Latest Changes
          run: git pull origin main
        
-       - name: Start Odoo service (on EC2)
-         run: sudo systemctl start odoo
+       #- name: Start Odoo service (on EC2)
+       #run: sudo systemctl start odoo
