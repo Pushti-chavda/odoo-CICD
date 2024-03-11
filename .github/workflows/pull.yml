@@ -11,11 +11,11 @@ jobs:
        - name: Checkout code
          uses: actions/checkout@v2  
        
-       - name: change the directory
-         run: cd /opt/odoo/custom/odoo-CICD/addons
-       
        - name: Pull Latest Changes
          run: git pull origin main
+
+       - name: change the directory
+         run: cd /opt/odoo/custom/odoo-CICD/addons
        
        - name: Start Odoo service (on EC2)
          run: sudo systemctl start odoo
