@@ -14,11 +14,8 @@ jobs:
       # - name: Change directory permissions (adjust permissions as needed)
       #   run: chmod -R 755 /opt/odoo/custom/odoo-CICD/addons
 
-      - name: Change the directory (after permission change)
-        run: cd /opt/odoo/custom/odoo-CICD/addons
-  
-      - name: Pull Latest Changes
-        run: git pull origin main
+      - name: Change the directory (after permission change) & pull latest code
+        run: cd /opt/odoo/custom/odoo-CICD/addons && git pull origin main
 
       # - name: Start Odoo service (on EC2)
       #   run: sudo systemctl start odoo
