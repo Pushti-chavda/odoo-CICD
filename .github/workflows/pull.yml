@@ -8,15 +8,17 @@ jobs:
   build-and-push:
     runs-on: self-hosted
     steps:
-       - name: Checkout code
-         uses: actions/checkout@v2  
+      - name: Checkout code
+        uses: actions/checkout@v2  
        
-       - name: change the directory
-         run: |
-            cd /opt/odoo/custom/odoo-CICD/addons
+      - name: Change directory permissions (adjust permissions as needed)
+        run: chmod 755 /opt/odoo/custom/odoo-CICD/addons
 
-       - name: Pull Latest Changes
-         run: git pull origin main
+      - name: Change the directory (after permission change)
+        run: cd /opt/odoo/custom/odoo-CICD/addons
+  
+      - name: Pull Latest Changes
+        run: git pull origin main
 
-       - name: Start Odoo service (on EC2)
-         run: sudo systemctl start odoo
+      # - name: Start Odoo service (on EC2)
+      #   run: sudo systemctl start odoo
