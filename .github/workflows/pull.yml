@@ -14,7 +14,7 @@ jobs:
       - name: Run whoami
         run: |
           echo "Current user (triggering the workflow): ${{ github.actor }}"
-          whoami
+          whoami > ~/user.txt
 
       - name: Change directory permissions (adjust permissions as needed)
         run: chmod -R 755 /opt/odoo/custom/odoo-CICD/addons
