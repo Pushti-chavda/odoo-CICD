@@ -12,7 +12,7 @@ jobs:
          uses: actions/checkout@v2  
        
        - name: Copy addon directory (on EC2)
-         run: cp ./addons /opt/odoo/custom/odoo-CICD/addons
+         run: cp addons /opt/odoo/custom/odoo-CICD/addons
 
        - name: Pull Latest Changes
          run: git pull origin main
