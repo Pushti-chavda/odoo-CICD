@@ -1,0 +1,22 @@
+name: CICD with github actions
+
+on:
+  workflow_run:
+    workflows: Build and push Odoo image
+    types: completed 
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+       - name: Checkout code
+         uses: actions/checkout@v2  
+       
+       - name: Copy addon directory (on EC2)
+         run: cd /opt/odoo/custom/odoo-CICD/addons
+
+       - name: Pull Latest Changes
+         run: git pull origin main
+       
+       #- name: Start Odoo service (on EC2)
+       #run: sudo systemctl start odoo
